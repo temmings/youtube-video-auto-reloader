@@ -8,9 +8,18 @@
 <body>
 
   <label>
-    <input type="checkbox" name="examplOption" checked>
-    Example Option
+    Interval second(s) to check if video freeze:
+    <input id="interval" type="number" name="interval"
+           min="10" max="3600">
   </label>
+
+  <label>
+    Output debug message in developer console:
+    <input id="verbose" type="checkbox" name="verbose">
+  </label>
+
+  <div id="status"></div>
+  <button id="save">Save</button>
 
   <script src="../scripts/options.js"></script>
 </body>
