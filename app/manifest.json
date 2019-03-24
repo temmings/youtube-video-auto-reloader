@@ -2,7 +2,7 @@
   "name": "Youtube video auto reloader",
   "short_name": "yt-ar",
   "description": "Auto reload tab when YouTube video freeze.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "default_locale": "en",
   "icons": {
