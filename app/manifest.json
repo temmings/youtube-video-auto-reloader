@@ -1,18 +1,30 @@
 {
-  "name": "__MSG_appName__",
-  "short_name": "__MSG_appShortName__",
-  "description": "__MSG_appDescription__",
-  "version": "0.0.0",
+  "name": "Youtube video auto reloader",
+  "short_name": "yt-ar",
+  "description": "Auto reload tab when YouTube video freeze.",
+  "version": "0.0.1",
   "manifest_version": 2,
   "default_locale": "en",
   "icons": {
     "16": "images/icon-16.png",
     "128": "images/icon-128.png"
   },
-  "background": {
-    "scripts": [
-      "scripts/background.js"
-    ]
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch*"],
+      "js": [
+        "scripts/content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "page_action": {
+    "default_icon": {
+      "19": "images/icon-19.png",
+      "38": "images/icon-38.png"
+    },
+    "default_title": "YouTube video auto reloader",
+    "default_popup": "pages/popup.html"
   },
   "options_page": "pages/options.html",
   "options_ui": {
@@ -20,7 +32,8 @@
     "chrome_style": true
   },
   "permissions": [
+    "storage",
     "tabs",
-    "<all_urls>"
+    "https://www.youtube.com/watch*"
   ]
 }
