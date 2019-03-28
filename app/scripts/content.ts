@@ -32,7 +32,7 @@ function isProgressVideo(video: HTMLVideoElement): boolean {
   const currentTime = video.currentTime;
   verboseLog('previousTime: %f : currentTime: %f', previousTime, currentTime);
 
-  return previousTime < currentTime;
+  return previousTime != currentTime;
 }
 
 function reloadTab(): void {
