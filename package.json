@@ -1,7 +1,7 @@
 {
   "name": "YouTube-auto-video-reloader",
   "private": true,
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Auto reload tab when YouTube video freeze.",
   "scripts": {
     "start": "npm run dev:chrome",
